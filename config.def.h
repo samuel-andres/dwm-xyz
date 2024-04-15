@@ -40,15 +40,6 @@ static Sp scratchpads[] = {
 	{"spterm",      spcmd1},
 	{"spcalc",      spcmd2},
 };
-static const char *const autostart[] = {
-	"st", NULL,
-	"slstatus", NULL,
-	"xcompmgr", NULL,
-	"sxhkd", NULL,
-	"sh", "-c", "$HOME/.local/bin/set_background.sh", NULL,
-	"sh", "-c", "$HOME/.local/bin/mirror_screen.sh", NULL,
-	NULL /* terminate */
-};
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
