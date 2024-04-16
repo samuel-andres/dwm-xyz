@@ -171,6 +171,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Return,			spawn,			{.v = termcmd } },
 	{ MODKEY|ShiftMask,     XK_BackSpace,  		killclient,     {0} },
 	{ MODKEY,				XK_w,				spawn,			{.v = (const char*[]){ BROWSER, NULL } } },
+	{ MODKEY|ShiftMask,		XK_s,				spawn,			{.v = (const char*[]){ "pactl set-default-sink alsa_output.pci-0000_00_1f.3-platform-skl_hda_dsp_generic.HiFi__hw_sofhdadsp__sink", NULL } } },
 	{ MODKEY,				XK_t,				setlayout,		{.v = &layouts[0]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,				setlayout,		{.v = &layouts[1]} }, /* bstack */
 	{ MODKEY,				XK_y,				setlayout,		{.v = &layouts[2]} }, /* spiral */
