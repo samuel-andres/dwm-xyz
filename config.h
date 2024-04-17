@@ -50,8 +50,8 @@ static const char *const autostart[] = {
 	"slstatus", NULL,
 	"xcompmgr", NULL,
 	"sxhkd", NULL,
-	"sh", "-c", "$HOME/.local/bin/set_background.sh", NULL,
-	"sh", "-c", "$HOME/.local/bin/mirror_screen.sh", NULL,
+	"sh", "-c", "$HOME/.local/bin/dwm/set-background.sh", NULL,
+	"sh", "-c", "$HOME/.local/bin/dwm/mirror-screen.sh", NULL,
 	NULL /* terminate */
 };
 
