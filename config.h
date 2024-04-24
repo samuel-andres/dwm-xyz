@@ -153,7 +153,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_k,           pushstack,          {.i = INC(-1) } },
     { MODKEY|ShiftMask,             XK_v,           pushstack,          {.i = 0  } },
 
-    /* Set the current view to the selected tag */
+    /* Show only the windows with the selected tag */
     { MODKEY,                       XK_1,           view,               {.ui = 1 << 0} },
     { MODKEY,                       XK_2,           view,               {.ui = 1 << 1} },
     { MODKEY,                       XK_3,           view,               {.ui = 1 << 2} },
@@ -178,7 +178,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_9,           tag,                {.ui = 1 << 8} },
     { MODKEY|ShiftMask,             XK_0,           tag,                {.ui = ~0    } },
 
-    /* Add/remove the selected tag from the current view */
+    /* Show/hide windows with the selected tag */
     { MODKEY|ControlMask,           XK_1,           toggleview,         {.ui = 1 << 0} },
     { MODKEY|ControlMask,           XK_2,           toggleview,         {.ui = 1 << 1} },
     { MODKEY|ControlMask,           XK_3,           toggleview,         {.ui = 1 << 2} },
@@ -200,11 +200,11 @@ static const Key keys[] = {
     { MODKEY|ControlMask|ShiftMask, XK_8,           toggletag,          {.ui = 1 << 7} },
     { MODKEY|ControlMask|ShiftMask, XK_9,           toggletag,          {.ui = 1 << 8} },
 
-    /* Set the current view to the previous/next tag */
+    /* Show only the windows with the previous/next tag */
     { MODKEY|ShiftMask,             XK_h,           shiftview,          { .i = -1 } },
     { MODKEY|ShiftMask,             XK_l,           shiftview,          { .i = 1  } },
 
-    /* Move the focused window to the previous/next tag */
+    /* Replace the tag of the focused window the previous/next tag */
     { MODKEY|ControlMask|ShiftMask, XK_h,           shifttag,           { .i = -1 } },
     { MODKEY|ControlMask|ShiftMask, XK_l,           shifttag,           { .i = 1  } },
 
