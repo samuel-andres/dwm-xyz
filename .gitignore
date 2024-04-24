@@ -1,7 +1,7 @@
 .gitignore
 *.orig
 *.rej
-larbs.pdf
+*.o
 patches
 util.o
 dwm
