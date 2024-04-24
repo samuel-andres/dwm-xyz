@@ -1,8 +1,8 @@
 ## Patches and features
 
-- [Clickable statusbar](https://dwm.suckless.org/patches/statuscmd/) with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
+- [Clickable statusbar](https://dwm.suckless.org/patches/statuscmd/)
 - Reads [xresources](https://dwm.suckless.org/patches/xresources/) colors/variables (i.e. works with `pywal`, etc.).
-- scratchpad.
+- Scratchpads.
 - New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys.
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/): True fullscreen and prevents focus shifting.
 - [sticky](https://dwm.suckless.org/patches/sticky/): Windows can be made sticky.
