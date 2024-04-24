@@ -1,3 +1,6 @@
+![](https://c.tenor.com/Ow2L8IP50uYAAAAd/tenor.gif)
+
+
 ## Patches and features
 
 - [Clickable statusbar](https://dwm.suckless.org/patches/statuscmd/)
