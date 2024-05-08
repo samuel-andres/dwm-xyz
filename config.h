@@ -266,10 +266,16 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_dead_grave,  togglescratch,      {.ui = 0   } }, /* st */
 
     /* Launch commands */
-    { MODKEY|ShiftMask,             XK_Return,      spawn,              {.v = termcmd} },
-    { MODKEY,                       XK_w,           spawn,              {.v = (const char*[]){ BROWSER, NULL } } },
-    { MODKEY,                       XK_e,           spawn,              {.v = (const char*[]){ EMOJI_PICKER, NULL } } },
-    { MODKEY,                       XK_p,           spawn,              {.v = (const char*[]){ LAUNCHER, NULL } } },
+    { MODKEY|ShiftMask,             XK_Return,                spawn,              {.v = termcmd} },
+    { MODKEY,                       XK_w,                     spawn,              {.v = (const char*[]){ BROWSER, NULL } } },
+    { MODKEY,                       XK_e,                     spawn,              {.v = (const char*[]){ EMOJI_PICKER, NULL } } },
+    { MODKEY,                       XK_p,                     spawn,              {.v = (const char*[]){ LAUNCHER, NULL } } },
+    { MODKEY|Mod1Mask,              XK_s,                     spawn,              SHCMD("scrot -s ~/Pictures/Screenshots/%b%d::%H%M%S.png")},
+    { 0,                            XF86XK_MonBrightnessUp,   spawn,              SHCMD("brightnessctl -q set 5%+")},
+    { 0,                            XF86XK_MonBrightnessDown, spawn,              SHCMD("brightnessctl -q set 5%-")},
+    { 0,                            XF86XK_AudioRaiseVolume,  spawn,              SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%+")},
+    { 0,                            XF86XK_AudioLowerVolume,  spawn,              SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%-")},
+    { 0,                            XF86XK_AudioMute,         spawn,              SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle")},
 
     /* Load X resources */
     { MODKEY,                       XK_F5,          xrdb,               {.v = NULL } },
