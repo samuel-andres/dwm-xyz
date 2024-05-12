@@ -20,8 +20,8 @@
 /* key aliases */
 #define MODKEY              Mod4Mask /* SUPER */
 /* fonts */
-#define FONT                "IBM Plex Mono:size=10"
-#define TERM_FONT           "IBM Plex Mono:size=16"
+#define FONT                "mono:size=10"
+#define TERM_FONT           "mono:size=16"
 #define ICON_FONT           "Twemoji:pixelsize=10:antialias=true:autohint=true"
 
 /* -- Appearance -- */
