@@ -20,8 +20,8 @@
 /* key aliases */
 #define MODKEY              Mod4Mask /* SUPER */
 /* fonts */
-#define FONT                "mono:size=10"
-#define TERM_FONT           "mono:size=16"
+#define FONT                "monospace:size=10"
+#define TERM_FONT           "monospace:size=16"
 #define ICON_FONT           "Twemoji:pixelsize=10:antialias=true:autohint=true"
 
 /* -- Appearance -- */
