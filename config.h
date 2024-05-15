@@ -3,7 +3,7 @@
 /* -- Constants -- */
 /* commands */
 #define TERMINAL 	    "st"
-#define BROWSER 	    "firefox"
+#define BROWSER 	    "qutebrowser"
 #define BACKGROUND 	    "bg"
 #define MUSIC 		    "psst-gui"
 #define SPMUSIC 	    "spmusic"
@@ -17,6 +17,7 @@
 /* X window classes */
 #define TERMCLASS           "St"
 #define MUSICCLASS          "Psst-gui"
+#define FMCLASS             "Ranger"
 /* key aliases */
 #define MODKEY              Mod4Mask /* SUPER */
 /* fonts */
@@ -81,13 +82,14 @@ static const Rule rules[] = {
     { TERMCLASS,  SPCALC,     NULL,             SPTAG(1),     1,           1,           0,            -1 }, /* bc scratchpad   */
     /* pstt scratchpad; set instance to SPMUSIC when the --name flag works */
     { MUSICCLASS, NULL,       NULL,             SPTAG(2),     1,           0,           0,            -1 },
+    { FMCLASS,    NULL,       NULL,             0,            1,           0,           1,            -1 },
 };
 
 /* -- Layout(s) -- */
 #include "vanitygaps.c"
 static float mfact                  = 0.55;                     /* factor of master area size [0.05..0.95]                          */
 static int nmaster                  = 1;                        /* number of clients in master area                                 */
-static int resizehints              = 0;                        /* 1 means respect size hints in tiled resizals                     */
+static int resizehints              = 1;                        /* 1 means respect size hints in tiled resizals                     */
 static const int lockfullscreen     = 1;                        /* 1 will force focus on the fullscreen window                      */
 #define FORCE_VSPLIT 1                                          /* nrowgrid layout: force two clients to always split vertically    */
 static const Layout layouts[] = {
