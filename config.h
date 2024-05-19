@@ -5,8 +5,7 @@
 #define TERMINAL 	    "st"
 #define BROWSER 	    "qutebrowser"
 #define BACKGROUND 	    "bg"
-#define MUSIC 		    "psst-gui"
-#define SPMUSIC 	    "spmusic"
+#define MUSIC 		    "ncspot"
 #define EMOJI_PICKER        "emojipick"
 #define CALCULATOR 	    "bc"
 #define LAUNCHER            "dmenu_run"
@@ -14,10 +13,10 @@
 /* scratchpads */
 #define SPTERM 		    "spterm"
 #define SPCALC 		    "spcalc"
+#define SPMUSIC 	    "spmusic"
 #define XEVTITLE 	    "Event Tester"
 /* X window classes */
 #define TERMCLASS           "St"
-#define MUSICCLASS          "Psst-gui"
 #define FMCLASS             "Ranger"
 /* key aliases */
 #define MODKEY              Mod4Mask /* SUPER */
@@ -62,7 +61,7 @@ typedef struct {
 } Sp;
 const char *spcmd1[] = {TERMINAL, "-n",     SPTERM,  "-g", "120x34", NULL };
 const char *spcmd2[] = {TERMINAL, "-n",     SPCALC,  "-f", TERM_FONT, "-g", "50x20", "-e", CALCULATOR, "-lq", NULL };
-const char *spcmd3[] = {MUSIC,    "--name", SPMUSIC, NULL};
+const char *spcmd3[] = {TERMINAL, "-n",     SPMUSIC, "-g", "120x34" "-e", MUSIC, NULL};
 static Sp scratchpads[] = {
     /* name          cmd  */
     { SPTERM,      spcmd1},
@@ -81,8 +80,7 @@ static const Rule rules[] = {
     /* scratchpads rules */
     { TERMCLASS,  SPTERM,     NULL,             SPTAG(0),     1,           1,           0,            -1 }, /* st scratchpad   */
     { TERMCLASS,  SPCALC,     NULL,             SPTAG(1),     1,           1,           0,            -1 }, /* bc scratchpad   */
-    /* pstt scratchpad; set instance to SPMUSIC when the --name flag works */
-    { MUSICCLASS, NULL,       NULL,             SPTAG(2),     1,           0,           0,            -1 },
+    { TERMCLASS,  SPMUSIC,    NULL,             SPTAG(2),     1,           1,           0,            -1 }, /* ncspot scratchpad */
     { FMCLASS,    NULL,       NULL,             0,            1,           0,           1,            -1 },
 };
 
@@ -265,7 +263,7 @@ static const Key keys[] = {
 
     /* Toggle scratchpads */
     { MODKEY|ShiftMask,             XK_apostrophe,  togglescratch,      {.ui = 1   } }, /* bc */
-    { MODKEY|ShiftMask,             XK_exclamdown,  togglescratch,      {.ui = 2   } }, /* psst */
+    { MODKEY|ShiftMask,             XK_exclamdown,  togglescratch,      {.ui = 2   } }, /* spotify */
     { MODKEY|ShiftMask,             XK_dead_grave,  togglescratch,      {.ui = 0   } }, /* st */
 
     /* Launch commands */
