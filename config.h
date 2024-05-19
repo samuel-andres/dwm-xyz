@@ -10,6 +10,7 @@
 #define EMOJI_PICKER        "emojipick"
 #define CALCULATOR 	    "bc"
 #define LAUNCHER            "dmenu_run"
+#define LOCKER              "slock"
 /* scratchpads */
 #define SPTERM 		    "spterm"
 #define SPCALC 		    "spcalc"
@@ -272,6 +273,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_w,                     spawn,              {.v = (const char*[]){ BROWSER, NULL } } },
     { MODKEY,                       XK_e,                     spawn,              {.v = (const char*[]){ EMOJI_PICKER, NULL } } },
     { MODKEY,                       XK_p,                     spawn,              {.v = (const char*[]){ LAUNCHER, NULL } } },
+    { MODKEY|ShiftMask,             XK_comma,                 spawn,              {.v = (const char*[]){ LOCKER, NULL } } },
     { MODKEY|Mod1Mask,              XK_s,                     spawn,              SHCMD("scrot -s ~/Pictures/Screenshots/%b%d::%H%M%S.png")},
     { 0,                            XF86XK_MonBrightnessUp,   spawn,              SHCMD("brightnessctl -q set 5%+")},
     { 0,                            XF86XK_MonBrightnessDown, spawn,              SHCMD("brightnessctl -q set 5%-")},
