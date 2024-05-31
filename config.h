@@ -21,9 +21,9 @@
 /* key aliases */
 #define MODKEY              Mod4Mask /* SUPER */
 /* fonts */
-#define FONT                "monospace:size=10"
-#define TERM_FONT           "monospace:size=16"
-#define ICON_FONT           "Twemoji:pixelsize=10:antialias=true:autohint=true"
+#define FONT                "monospace:pixelsize=12"
+#define TERM_FONT           "monospace:pixelsize=12"
+#define ICON_FONT           "Twemoji:pixelsize=12:antialias=true:autohint=true"
 
 /* -- Appearance -- */
 static unsigned int borderpx                = 3;   /* border pixel of windows */
